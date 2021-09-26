@@ -23,9 +23,9 @@ spec:
     spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        imagePullPolicy: IfNotPresent
         name: techtrends-app
-        ports: 
+        ports:
         - containerPort: {{ .Values.containerPort }}
         resources:
           requests:
@@ -33,11 +33,11 @@ spec:
             memory: {{ .Values.resources.requests.memory }}
           limits:
             cpu: {{ .Values.resources.limits.CPU }}
-            memory: {{ .Values.resources.limits.memory }}         
+            memory: {{ .Values.resources.limits.memory }}
         livenessProbe:
 		 httpGet:
 		   path: {{ .Values.livenessProbe.path }}
 		   port: 3111
 	   readinessProbe:
-	      path: {{ .Values.readinessProbe.path }} 
+	      path: {{ .Values.readinessProbe.path }}
 	      port: 3111

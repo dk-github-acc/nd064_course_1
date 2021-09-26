@@ -17,7 +17,7 @@ items:
     - IPv4
     ipFamilyPolicy: SingleStack
     ports:
-    - port: {{ .Values.service.port }]
+    - port: {{ .Values.service.port }}
       protocol: {{ .Values.service.protocol }}
       targetPort: {{ .Values.service.targetPort }}
     selector:
@@ -30,4 +30,3 @@ kind: List
 metadata:
   resourceVersion: ""
   selfLink: ""
-

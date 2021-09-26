@@ -10,7 +10,7 @@ image:
 replicaCount: 5
 
 resources:
-  requests: 
+  requests:
     memory: 128Mi
     CPU: 350m
   limits:

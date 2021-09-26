@@ -6,7 +6,7 @@ service:
 
 replicaCount: 3
 
-resources: 
+resources:
   requests:
     memory: 90Mi
     CPU: 300m

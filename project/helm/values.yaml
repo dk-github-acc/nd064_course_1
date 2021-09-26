@@ -7,8 +7,8 @@ service:
   protocol: TCP
   type: ClusterIP
 
-image: 
-  repository: docker2dk/techtrends 
+image:
+  repository: docker2dk/techtrends
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -18,7 +18,7 @@ resources:
   requests:
     memory: 64Mi
     CPU: 250m
-  limits: 
+  limits:
     memory: 128Mi
     CPU: 500m
 
@@ -29,4 +29,3 @@ livenessProbe:
 
 readinessProbe:
   path: /healthz
-
